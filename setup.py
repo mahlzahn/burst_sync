@@ -538,9 +538,9 @@ def setup_package():
           ext_modules=cythonize(extensions),
           tests_require=['pytest-cov', 'pytest'],
           package_data={package: metadata['package_data']},
-          data_files=[('.', metadata['data_files']),
-                      ('burst_sync.spike.cython_spike', spike_other_files),
-                      ('burst_sync.sttc.cython_sttc', sttc_other_files)],
+          #data_files=[('.', metadata['data_files']),
+          #            ('burst_sync.spike.cython_spike', spike_other_files),
+          #            ('burst_sync.sttc.cython_sttc', sttc_other_files)],
           command_options=command_options,
           entry_points={'console_scripts': console_scripts},
           zip_safe=False)  # do not zip egg file after setup.py install
